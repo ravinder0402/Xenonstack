@@ -1,0 +1,114 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <title>BITTE COFFEE SHOP (Minor Project)</title>
+</head>
+
+<body style="background-image: url({% static 'images/coffee.jpg' %})">
+    <div class="yeet">
+
+        <nav>
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#map">Location</a></li>
+                <li><a href="../shop/login.html">Login/SignUp</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="text" style="background-image: url({% static 'images/coffee-brew.jpg' %})">
+        <h1 style="font-size: 90px;">BITTE COFFEE SHOP</h1><span style="font-size: 20px;"><br><br>
+            <h3>THE FULL COFFEE EXPERIENCE<br>
+                Rich, dark and mysterious. Complex flavour and acidity.<br><br>
+        </span>
+
+        <a id="shop" href="" style="color: wheat; text-decoration: solid; font-size: large;">SHOP NOW</a></h3>
+
+    </div>
+    <div class="body" id = "menu">
+        <h1 style="color: aliceblue; font-size: 100px; font-weight: 200;" >M<br>E<br>N<br>U</h1>
+        <div class="container">
+            <div class="panel active" style="
+          background-image: url({% static 'images/Cappuccino.jpg' %});
+        ">
+                <h3>Cappuccino<br>₹90</h3>
+            </div>
+            <div class="panel active" style="
+          background-image: url({% static 'images/latte.jpg' %});
+        ">
+                <h3>latte<br>₹190</h3>
+            </div>
+            <div class="panel active" style="
+          background-image: url({% static 'images/Mocha.jpg' %});
+        ">
+                <h3>Mocha<br>₹200</h3>
+            </div>
+            <div class="panel" style="
+          background-image: url({% static 'images/Grilled-Cheese-Sandwich-SQ.jpg' %});
+        ">
+                <h3>Grilled Cheese Sandwich<br>₹220</h3>
+            </div>
+            <div class="panel" style="
+          background-image: url({% static 'images/grilled-veggie-wraps-8.jpg' %});
+        ">
+                <h3>Grilled veggie wraps<br>₹220</h3>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class = "cont">
+        <div id="about" class = "downsec" style="background-image: url({% static 'images/coffee-shop.png' %}); ">
+            <section id="about">
+                <h2 style="text-align: center;">About Us</h2>
+
+
+                <h3 style="color:blanchedalmond">We are a small family-owned coffee shop in the heart of downtown. We pride ourselves on serving
+                    the best coffee in town, as well as delicious pastries and sandwiches. </h3>
+            </section>
+
+        </div>
+        <div id = "contact-us" class = "downsec" style="background-image: url({% static 'images/contact-us.png' %});">
+            <section id="contact">
+                <h2 style="text-align: center;">Contact Us</h2>
+
+
+                <h3 id="formsec">
+                    <form method="post" action="{% url 'save_text' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea><br>
+                        <input type="submit" value="Send">
+                    </form>
+                </h3>
+            </section>
+
+        </div>
+    </div>
+   
+    <script src="{% static 'js/script.js' %}"></script>
+    <div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5337.413226682222!2d76.76947425061054!3d30.752635349223514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed9b3bb05471%3A0xd25d0c0c5b60e66a!2sDomino&#39;s%20Pizza!5e0!3m2!1sen!2sin!4v1682442160828!5m2!1sen!2sin" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><br><br>
+    </body>
+
+<footer>
+    <p>&copy; 2023 Bitte Coffee Shop</p>
+</footer>
+
+</html>

@@ -1,0 +1,178 @@
+{% load static %}
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.yeet {
+  font-family: "Muli", sans-serif;
+  color: #c0ffee;
+  background-position: 0%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+
+  color: #724e2c;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 50px;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 1;
+  border-radius: 25px;
+  background-color:burlywood;
+  padding: 15px;
+  font-weight: 600;
+  transition: transform .2s;
+  top:2%;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+
+}
+
+body {
+/*   background-image: url("{% static 'images/coffee.jpg' %}) */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 2;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+#formsec {
+  position: relative;
+  top: 50px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="submit"] {
+  background-color: #c0ffee;
+  color: brown;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+}
+
+.text {
+  font-family: "Muli", sans-serif;
+  text-align: center;
+  background-image: url(coffee-brew.jpg);
+  color: #fff;
+  border-radius: 2px;
+  padding: 300px;
+  color: white;
+  text-shadow: 0 0 1px #000000, 0 0 3px #000000;
+}
+
+.downsec{
+ height: 700px;
+ font-family: "Muli", sans-serif;
+ font-size: 20px;
+ color: #ffffff;
+ padding: 15%;
+ border-radius: 5px;
+
+}
+.cont{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+#map{
+  position: relative;
+  top: 40px;
+}
