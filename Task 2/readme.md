@@ -21,3 +21,18 @@ This project is a coffee shop website developed using Django for the backend and
 ```bash
 git clone https://github.com/ravinder0402/Xenonstack
 cd coffeeshop
+
+2. Running the Application
+
+Make migrations and migrate the database:
+bash
+Copy code
+python manage.py makemigrations
+python manage.py migrate
+
+3. Run the development server:
+bash
+Copy code
+python manage.py runserver
+
+The website will be accessible at http://localhost:8000
