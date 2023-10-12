@@ -19,5 +19,5 @@ This project is a coffee shop website developed using Django for the backend and
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ravinder0402/Xenonstack
 cd coffeeshop
